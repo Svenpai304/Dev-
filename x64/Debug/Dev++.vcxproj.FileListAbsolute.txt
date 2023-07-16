@@ -1,1 +1,2 @@
 D:\repos\Dev++\x64\Debug\Dev++.exe
+C:\Users\svenv\Documents\GitHub\Dev-\x64\Debug\Dev++.exe
