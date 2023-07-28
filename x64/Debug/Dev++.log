@@ -1,2 +1,5 @@
 ﻿  Dev--.cpp
-  Dev++.vcxproj -> C:\Users\svenv\Documents\GitHub\Dev-\x64\Debug\Dev++.exe
+D:\repos\Dev-\EnemyManager.h(23): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\repos\Dev-\Dev--.cpp(14,69): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\repos\Dev-\Dev--.cpp(42,74): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Dev++.vcxproj -> D:\repos\Dev-\x64\Debug\Dev++.exe

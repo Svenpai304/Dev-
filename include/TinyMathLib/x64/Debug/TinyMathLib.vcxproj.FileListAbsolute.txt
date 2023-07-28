@@ -1,0 +1,1 @@
+D:\repos\TinyMathLib\x64\Debug\TinyMathLib.lib
