@@ -14,9 +14,10 @@ public:
 	BoxCollider* collider{};
 	TinyMathLib::Vector2 position;
 	TinyMathLib::Vector2 velocity;
-	float friction = 0.99f;
+	float dragCoefficient = 0.5f;
+	float crossSectionalArea = 0.5f;
 	float mass = 1;
-	float gravity = 100;
+	float gravity = 150;
 	bool gravityOn = false;
 
 	void Update(float deltaTime);

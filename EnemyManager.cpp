@@ -34,7 +34,6 @@ void EnemyManager::CreateEnemy() {
 	TinyMathLib::Vector2 position = TinyMathLib::Vector2(std::rand() % 800 + 50, -200);
 	Enemy* enemy = new Enemy(position, enemyScale, enemyMass, &enemyTexture);
 	enemy->rb->gravityOn = true;
-	enemy->rb->friction = 0.995;
 	enemy->manager = this;
 	enemy->window = window;
 	collisionChecker->AddCollider(enemy->rb->collider);

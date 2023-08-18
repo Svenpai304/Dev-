@@ -10,12 +10,13 @@ Rigidbody::Rigidbody(TinyMathLib::Vector2 _position, float _mass) {
 void Rigidbody::Update(float deltaTime) {
 
 	if (gravityOn) {
-		velocity.y += gravity * deltaTime;
+		AddForce(TinyMathLib::Vector2(0, gravity * deltaTime));
 	}
 
-	position = position + (velocity * deltaTime);
+	TinyMathLib::Vector2 drag = (velocity * 0.5f * crossSectionalArea * dragCoefficient) * -1;
+	AddForce(drag);
 
-	velocity = velocity * friction;
+	position = position + (velocity * deltaTime);
 
 	if ((position.x < 50 && velocity.x < 0) || (position.x > actor->window->getSize().x - 50 && velocity.x > 0)) {
 		velocity.x *= -1;

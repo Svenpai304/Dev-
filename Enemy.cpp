@@ -12,7 +12,8 @@ Enemy::Enemy(TinyMathLib::Vector2 position, TinyMathLib::Vector2 scale, float ma
 	rb->collider->xHalf = scale.x * 150;
 	rb->collider->yHalf = scale.y * 150;
 	rb->mass = mass;
-	rb->gravity = 150;
+	rb->gravity = 250;
+	rb->dragCoefficient = 0.02f;
 	rb->actor = this;
 	texture = _texture;
 	sprite.setTexture(*texture);
@@ -21,7 +22,7 @@ Enemy::Enemy(TinyMathLib::Vector2 position, TinyMathLib::Vector2 scale, float ma
 	sprite.setPosition(position.x, position.y);
 }
 void Enemy::OnCollision(Rigidbody* other) {
-	std::cout << "Collision";
+	std::cout << "Collision" << "\n";
 	if (typeid(*other->actor) == typeid(Enemy)) {
 	}
 	else if (typeid(*other->actor) == typeid(Player)) {
@@ -31,7 +32,7 @@ void Enemy::OnCollision(Rigidbody* other) {
 }
 void Enemy::Update(float deltaTime) {
 	rb->Update(deltaTime);
-
+	
 	sprite.setPosition(rb->position.x, rb->position.y);
 	window->draw(sprite);
 
