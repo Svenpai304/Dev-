@@ -1,2 +1,12 @@
-﻿  Rigidbody.cpp
+﻿  Player.cpp
+D:\repos\Dev-\Player.cpp(17,66): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\repos\Dev-\Player.cpp(17,40): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
   Dev++.vcxproj -> D:\repos\Dev-\x64\Debug\Dev++.exe

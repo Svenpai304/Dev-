@@ -14,6 +14,7 @@ public:
 	BoxCollider* collider{};
 	TinyMathLib::Vector2 position;
 	TinyMathLib::Vector2 velocity;
+	float deltaTime = 1.0f / 60;
 	float dragCoefficient = 0.5f;
 	float crossSectionalArea = 0.5f;
 	float mass = 1;

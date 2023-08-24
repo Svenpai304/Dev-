@@ -9,7 +9,7 @@ Player::Player(TinyMathLib::Vector2 position, TinyMathLib::Vector2 scale, float 
 	rb->collider->xHalf = scale.x * 1000;
 	rb->collider->yHalf = scale.y * 1000;
 	rb->mass = mass;
-	rb->dragCoefficient = 0.2f;
+	rb->dragCoefficient = 0.9f;
 	rb->actor = this;
 	texture = _texture;
 	sprite.setTexture(*texture);

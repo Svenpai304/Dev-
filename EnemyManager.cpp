@@ -40,7 +40,7 @@ void EnemyManager::CreateEnemy() {
 
 	enemies.push_back(enemy);
 
-	enemy->rb->AddForce(TinyMathLib::Vector2(std::rand() % 2000 - 1000, 0));
+	enemy->rb->AddForce(TinyMathLib::Vector2((std::rand() % 100000) - 50000, 0));
 }
 
 void EnemyManager::DestroyEnemy(Enemy* enemy) {

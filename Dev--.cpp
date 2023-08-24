@@ -8,7 +8,7 @@
 #include "CleanupManager.h"
 int main()
 {
-    float moveForce = 40;
+    float moveForce = 1500;
     float playerMass = 1;
     float playerSpawnHeight = 600;
     TinyMathLib::Vector2 playerScale = TinyMathLib::Vector2(0.1, 0.1);

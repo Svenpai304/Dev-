@@ -7,10 +7,12 @@ Rigidbody::Rigidbody(TinyMathLib::Vector2 _position, float _mass) {
 	collider = new BoxCollider(this, 1, 1);
 }
 
-void Rigidbody::Update(float deltaTime) {
+void Rigidbody::Update(float _deltaTime) {
+
+	deltaTime = _deltaTime;
 
 	if (gravityOn) {
-		AddForce(TinyMathLib::Vector2(0, gravity * deltaTime));
+		AddForce(TinyMathLib::Vector2(0, gravity));
 	}
 
 	TinyMathLib::Vector2 drag = (velocity * 0.5f * crossSectionalArea * dragCoefficient) * -1;
@@ -24,6 +26,6 @@ void Rigidbody::Update(float deltaTime) {
 }
 
 void Rigidbody::AddForce(TinyMathLib::Vector2 force) {
-	velocity.x += force.x / mass;
-	velocity.y += force.y / mass;
+	velocity.x += force.x / mass * deltaTime;
+	velocity.y += force.y / mass * deltaTime;
 }
